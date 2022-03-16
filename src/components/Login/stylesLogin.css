@@ -1,0 +1,63 @@
+.LOGINFULL{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+}
+
+.LOGINCARD{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(253, 239, 222);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    width:80vw;
+}
+
+.LOGINFULL h1{
+    padding: 10px;
+    color: rgb(253, 76, 126);
+    font-size: 35px;
+}
+
+.LOGINCARD form{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    font-size: 17px;
+}
+
+.LOGINCARD label{
+    margin: 0px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    align-self: flex-start !important;
+}
+
+.LOGINCARD input{
+    display: flex;
+    margin: 0px;
+    width: 47vw;
+    padding: 10px;
+    border-style: none;
+}
+
+.LOGINCARD button{
+    background-color: rgb(249, 159, 183);
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 40vw;
+    margin-top: 25px;
+}

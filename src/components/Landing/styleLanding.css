@@ -1,0 +1,21 @@
+.Landing {
+    background-image: url("../../Images/Home.png");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonLanding{
+    /* border-style: none; */
+    border-radius: 8px;
+    margin-left: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    background-color: white;
+    border-color: rgb(41, 36, 32);
+    margin-bottom: 50px;
+}
