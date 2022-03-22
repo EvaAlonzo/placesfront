@@ -1,0 +1,49 @@
+.Home{
+    /* background-image: url("../../Images/Home.png"); */
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.homeImgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.homeImgs img{
+    width: 250px;
+    margin-right: 50px;
+    margin-left:50px;  
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.buttonsHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    padding-right: 200px;
+    width: 100vw;
+}
+.buttonsHome button{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    margin-right: 65px;
+    margin-left: 45px;
+    padding: 15px 35px;
+    font-size: 25px;
+    color: #1d1d1d;
+    background-color: #fdf7ef;
+    border-radius: 15px;
+}

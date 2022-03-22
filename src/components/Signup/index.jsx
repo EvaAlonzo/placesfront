@@ -5,12 +5,15 @@ import * as PATHS from "../../utils/paths";
 import * as USER_HELPERS from "../../utils/userToken";
 import "./styleSignup.css"
 
-export default function Signup({ authenticate }) {
+export default function Signup({ authenticate, ...props }) {
+  console.log("lasprops", props)
   const [form, setForm] = useState({
+    username: "",
     email: "",
     password: "",
+    confirmPassword: ""
   });
-  const { email, password } = form;
+  const { username, email, password, confirmPassword } = form;
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -22,21 +25,25 @@ export default function Signup({ authenticate }) {
   function handleFormSubmission(event) {
     event.preventDefault();
     const credentials = {
+      username,
       email,
       password,
+      confirmPassword,
     };
     signup(credentials).then((res) => {
       if (!res.status) {
         // unsuccessful signup
         console.error("Signup was unsuccessful: ", res);
         return setError({
-          message: "Signup failed! Please check the console.",
+          message: "Signup failed! ",
         });
+      } else {
+          console.log("Accediste correctamente")
       }
       // successful signup
       USER_HELPERS.setUserToken(res.data.accessToken);
       authenticate(res.data.user);
-      navigate(PATHS.PROTECTEDPAGE);
+      navigate(PATHS.LANDING);
     });
   }
 
@@ -45,12 +52,23 @@ export default function Signup({ authenticate }) {
     <div className="SIGNUPCARD">
       <h1>Sign Up</h1>
       <form onSubmit={handleFormSubmission} className="auth__form">
-        <label htmlFor="input-username">email</label>
+      <label htmlFor="input-username">Username</label>
         <input
           id="input-username"
           type="text"
+          name="username"
+          placeholder="Username"
+          value={username}
+          onChange={handleInputChange}
+          required
+        />
+
+        <label htmlFor="input-email">Email</label>
+        <input
+          id="input-email"
+          type="text"
           name="email"
-          placeholder="Text"
+          placeholder="Email"
           value={email}
           onChange={handleInputChange}
           required
@@ -63,6 +81,18 @@ export default function Signup({ authenticate }) {
           name="password"
           placeholder="Password"
           value={password}
+          onChange={handleInputChange}
+          required
+          minLength="8"
+        />
+
+        <label htmlFor="input-confirmPassword">Confirm Password</label>
+        <input
+          id="input-confirmPassword"
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          value={confirmPassword}
           onChange={handleInputChange}
           required
           minLength="8"

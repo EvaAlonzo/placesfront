@@ -16,7 +16,6 @@ export default function LogIn({ authenticate }) {
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-
     return setForm({ ...form, [name]: value });
   }
 
@@ -28,23 +27,23 @@ export default function LogIn({ authenticate }) {
     };
     login(credentials).then((res) => {
       if (!res.status) {
-        return setError({ message: "Invalid credentials" });
+        // unseccessful login
+        return setError({ 
+          message: "Invalid credentials" 
+        });
       }
-      USER_HELPERS.setUserToken(res.data.accessToken);
-      authenticate(res.data.user);
-      navigate(PATHS.PROTECTEDPAGE);
+      navigate(PATHS.HOME);
     });
   }
 
   return (
     <div className="LOGINFULL">
-   
       <div className="LOGINCARD">
       <h1>Log In</h1>
       <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">email</label>
+        <label htmlFor="input-email">email</label>
         <input
-          id="input-username"
+          id="input-email"
           type="text"
           name="email"
           placeholder="email"

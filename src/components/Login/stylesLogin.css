@@ -17,8 +17,8 @@
     background-color: rgb(253, 239, 222);
     padding-top: 10px;
     padding-bottom: 40px;
-    border-radius: 8px;
-    width:80vw;
+    border-radius: 20px;
+    width:60vw;
 }
 
 .LOGINFULL h1{
@@ -33,7 +33,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
     font-size: 17px;
 }
 

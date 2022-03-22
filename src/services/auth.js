@@ -1,66 +1,34 @@
-import axios from "axios";
-import * as USER_HELPERS from "../utils/userToken";
+import { api } from "./api";
+import { internalServerError, successStatus } from "../utils/clearres";
 
-function internalServerError(err) {
-    if (err.response && err.response.data && err.response.data.errorMessage) {
-        return {
-        status: false,
-        errorMessage: err.response.data.errorMessage,
-        };
-    }
-        return {
-        status: false,
-        errorMessage: "Internal server error. Please check your server",
-    };
-};
-
-function successStatus(res) {
-    return {
-        status: true,
-        data: res.data,
-    };
-};
-
-//basic url for every request file
-const authService = axios.create({
-    baseURL: `${process.env.REACT_APP_SERVER_URL}/auth`,
-});
 
 //login
 export function login(credentials) {
-    return authService //user data
-        .post("/login", credentials)
+    return api //user data
+        .post("/auth/login", credentials)
         .then(successStatus)
         .catch(internalServerError);
 };
 
 export function getLoggedIn() {
-    return authService
-        .get(`session`, {
-        headers: {
-            Authorization: USER_HELPERS.getUserToken(),
-        },
-    })
+    return api
+        .get(`/auth/getuser`)
         .then(successStatus)
         .catch(internalServerError);
 };
 
 //signup
 export function signup(credentials) {
-    return authService
-        .post("/signup", credentials)
+    return api
+        .post("/auth/signup", credentials)
         .then(successStatus)
         .catch(internalServerError);
 };
 
 //logout
 export function logout() {
-    return authService
-        .delete("/logout", {
-            headers: {
-                Authorization: USER_HELPERS.getUserToken(),
-            },
-    })
+    return api
+        .delete("/auth/logout")
         .then(successStatus)
         .catch(internalServerError);
 };

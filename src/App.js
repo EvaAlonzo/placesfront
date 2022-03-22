@@ -10,11 +10,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const accessToken = USER_HELPERS.getUserToken();
-    if (!accessToken) {
-      return setIsLoading(false);
-    }
-    getLoggedIn(accessToken).then((res) => {
+    getLoggedIn().then((res) => {
       if (!res.status) {
         return setIsLoading(false);
       }
@@ -24,18 +20,12 @@ export default function App() {
   }, []);
 
   function handleLogout() {
-    const accessToken = USER_HELPERS.getUserToken();
-    if (!accessToken) {
-      setUser(null);
-      return setIsLoading(false);
-    }
     setIsLoading(true);
-    logout(accessToken).then((res) => {
+    logout().then((res) => {
       if (!res.status) {
         // deal with error here
         console.error("Logout was unsuccessful: ", res);
       }
-      USER_HELPERS.removeUserToken();
       setIsLoading(false);
       return setUser(null);
     });
@@ -54,7 +44,6 @@ export default function App() {
       <Routes>
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} 
-            //{...route}
           />
         ))}
       </Routes>

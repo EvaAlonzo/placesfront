@@ -5,15 +5,16 @@ nav {
     flex-wrap: wrap !important;
     background: #fdf7ef;
     font-weight: 600;
+    padding: 27px 0px;
   }
   
   .nav__projectName {
-    color: #3b3c3c;
+    color: #f56486;
     text-decoration: none;
   }
   
   .authLink {
-    color: #f56486;
+    color: #251a15;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
   }
@@ -44,5 +45,12 @@ nav {
   
   .nav-logoutbtn:hover {
     transform: scale(1.05);
-    background-color: #d13e3e;
+    background-color: #522e2e;
+  }
+
+  .authLink img{
+    width: 130px;
+  }
+  .imgICI{
+    width: 150px;
   }

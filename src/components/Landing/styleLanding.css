@@ -1,21 +1,41 @@
 .Landing {
-    background-image: url("../../Images/Home.png");
+    background-image: url("../../Images/Landing.png");
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-position-x: center;
     display: flex;
+    flex-direction: column;  
     align-items: center;
     justify-content: center;
 }
 
+.buttonCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 0px;
+    padding: 0px;
+} 
+
 .buttonLanding{
-    /* border-style: none; */
     border-radius: 8px;
     margin-left: 20px;
-    padding: 15px 25px;
+    padding: 15px 40px;
     font-size: 20px;
     background-color: white;
-    border-color: rgb(41, 36, 32);
-    margin-bottom: 50px;
+    border-color: rgb(250, 62, 102);
+    border-style: solid;
+    margin-bottom: 40px;
+}
+
+.LOGLAND{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    height: 40vh;
+    width: 60vw;
 }
