@@ -1,9 +1,9 @@
 import { internalServerError, successStatus } from "../utils/clearres";
 import { api } from "./api";
 
-export function uploadCloud(){
+export function uploadCloud(getImage){
     return api
-    .get("/upload")
+    .post("/upload", getImage)
     .then(successStatus)
     .catch(internalServerError)
 }

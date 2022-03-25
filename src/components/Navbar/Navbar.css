@@ -2,15 +2,20 @@ nav {
     display: flex !important;
     padding: 1em;
     justify-content: space-around !important; 
+    align-content: flex-end;
     flex-wrap: wrap !important;
     background: #fdf7ef;
     font-weight: 600;
     padding: 27px 0px;
+    width: 100vw;
+    position: fixed;
+    float: inline-start;
   }
   
   .nav__projectName {
     color: #f56486;
     text-decoration: none;
+    padding-right: 20px;
   }
   
   .authLink {

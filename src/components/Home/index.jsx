@@ -31,9 +31,6 @@ const Home = (props) => {
             <Link to={PATHS.CREATEPLACES}>
             <button><b>+</b></button>
             </Link>
-            
-           
-            
         </div>
 
         </div>

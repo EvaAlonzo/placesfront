@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { signup } from "../../services/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as PATHS from "../../utils/paths";
 import * as USER_HELPERS from "../../utils/userToken";
 import "./styleSignup.css"
@@ -40,6 +40,7 @@ export default function Signup({ authenticate, ...props }) {
       } else {
           console.log("Accediste correctamente")
       }
+      
       // successful signup
       USER_HELPERS.setUserToken(res.data.accessToken);
       authenticate(res.data.user);

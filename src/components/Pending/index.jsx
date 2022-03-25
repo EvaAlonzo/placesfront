@@ -1,14 +1,111 @@
-import {Navbar} from "../index"
+import { Navbar } from "../index";
 import * as PATHS from "../../utils/paths";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { placesList } from "../../services/places.js";
+import "./stylesPending.css"
+import flecha from "../../Images/Flecha.png";
+import editpencil from "../../Images/Edit.png"; 
+import React from "react";
+
 const Pending = (props) => {
-    return(
-        <div className="Pending">
-        <div><header><Navbar/></header></div>
-        <Link to={PATHS.HOME}><button>Return</button></Link>
-        aqui van los pendientes
+  const [getPlaces, setGetplaces] = useState([]);
+  const [fav, setFav] = React.useState();
+
+  useEffect(() => {
+    async function callPLaces() {
+      const { data } = await placesList();
+      setGetplaces(data.result);
+    }
+    callPLaces();
+  }, []); 
+  console.log("Pendingplaces", getPlaces);
+
+  const buttonClick = () => {
+    setFav((prevState) => !prevState);
+  };
+
+
+  return (
+    <div className="Pending">
+      <div>
+        <header>
+          <Navbar />
+        </header>
+      </div>
+
+      <div className="CARDPLACES2">
+        <Link to={PATHS.HOME}>
+          <img className="FlechaPlaces2" src={flecha} alt="icon-flecha" />
+        </Link>
+        <div className="CONTFLECHA2">
+          {getPlaces.map((place) => (
+            <div key={place._id}>
+            {place.status !== "Pending" ? (
+                  ""
+                    ) : (
+              <div className="PLACESCONT2">
+                <img
+                  className="PLACESIMG2"
+                  src={place.images[0]}
+                  alt="icon-place"
+                />
+                <h1>{place.title}</h1>
+                <hr />
+                <font size="3">
+                  <b>Address:</b>
+                </font>{" "}
+                <font size="2">{place.address}</font>
+                <br></br>
+                <br></br>
+                <font size="3">
+                  <b>Description:</b>
+                </font>{" "}
+                <font size="2">{place.description}</font>
+                <br></br>
+                <br></br>
+                <font size="3">
+                  <b>Rating:</b>
+                </font>{" "}
+                <font size="2">{place.rating}</font>
+                <br></br>
+                <br></br>
+                <font size="3">
+                  <b>Mood:</b>
+                </font>{" "}
+                <font>
+                  {place.status}
+                </font>
+                <br></br>
+                <br></br>
+                <div className="buttonCARD2">
+                  <button
+                    className="butttonFav2"
+                    onClick={buttonClick}
+                    // value={place.favorite}
+                  >
+                    { fav === false ? "☆" : "★"}
+                  </button>
+                  <Link to={PATHS.EDITPLACES}>
+                    <img
+                      src={editpencil}
+                      alt="icon-edit"
+                      className="buttonEdit2"
+                    />
+                  </Link>
+                </div>
+              </div>
+              )}
+            </div>
+          ))}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Pending;
+
+
+
+

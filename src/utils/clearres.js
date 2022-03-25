@@ -14,8 +14,11 @@ export function internalServerError(err) {
 
 export function successStatus(res) {
     console.log("elres", res)
+    console.log("eldata:", res.data)
     return {
         status: true,
         data: res.data,
     };
 };
+
+

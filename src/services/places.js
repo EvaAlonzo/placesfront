@@ -8,9 +8,23 @@ export function placesList(){
     .catch(internalServerError)
 }
 
-export function createPlaces(){
+export function createPlaces(fullPlace){
     return api
-    .get("/places/createplaces")
+    .post("/places/createplaces", fullPlace) //este es el payload
+    .then(successStatus)
+    .catch(internalServerError)
+}
+
+export function editPlaces(fullPlace){
+    return api
+    .post("/places/editplaces", fullPlace) //este es el payload
+    .then(successStatus)
+    .catch(internalServerError)
+}
+
+export function deletePlaces(fullPlace){
+    return api
+    .post("/places/deleteplaces", fullPlace) //este es el payload
     .then(successStatus)
     .catch(internalServerError)
 }

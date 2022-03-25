@@ -1,0 +1,90 @@
+.Pending{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+}
+
+.CARDPLACES2{
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.CARDPLACES2 h1{
+    margin: 10px;
+    font-size: 25px;
+}
+
+.PLACESIMG2{
+    width: 300px !important;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.PLACESCONT2{
+    position: static;
+    color:rgb(69, 69, 69);
+    width: 26vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.buttonCARD2{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 1%;
+    margin: 0px;
+}
+
+.buttonEdit2{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    padding: 7px 7px;
+    font-size: 20px;
+    color: #1d1d1d;
+    background-color: #fdf7ef;
+    border-radius: 15px;
+    margin-left: 18px;
+    width: 25px !important;
+    height: 25px;
+}
+
+.butttonFav2{
+    margin: 0 !important;
+    padding: 5px 10px !important;
+    
+}
+
+.FlechaPlaces2{
+    width: 50px;
+    position: fixed;
+    top: 360px; left: 980px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin-left: 50px;
+    margin-top: 280px;
+    background-color: rgb(252, 184, 208);
+}
+
+.CONTFLECHA2{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+    width: 98vw;
+    margin-top: 50px;
+}
+
+.empty{
+    margin: 0px;
+    padding: 0px;
+}

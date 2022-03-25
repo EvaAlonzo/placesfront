@@ -12,7 +12,6 @@ const Navbar = (props) => {
   return (
     <nav>
       <Link to={PATHS.HOME} className="nav__projectName">
-        {/* {CONSTS.CAPITALIZED_APP}  */}
         <img src={ICI} alt="iconsnav-ici" className="imgICI"/>
       </Link>
 
@@ -34,6 +33,7 @@ const Navbar = (props) => {
             <Link to={PATHS.FAVORITES} className="authLink">
               <img src={favorite} alt="iconsnav-fav"/>
             </Link> 
+            
             <Link to={PATHS.LOGOUT} className="authLink">
               <img src={logout} alt="iconsnav-logout"/>
             </Link> 

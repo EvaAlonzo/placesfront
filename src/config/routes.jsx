@@ -3,11 +3,21 @@ import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
 import Landing from "../components/Landing";
 import Navbar from "../components/Navbar"
-import { CreatePlaces, Done, EditPlaces, Favorites, Home, Pending, Places, User } from "../components";
+import { CreatePlaces, 
+  Done,
+  EditPlaces, 
+  EditUser, 
+  Favorites, 
+  Home, 
+  Pending, 
+  Places, 
+  User, 
+  EditPassword } from "../components";
+
 
 const routes = (props) => {
-  console.log("las otras props", props)
   const { user } = props;
+  console.log("routesUSER", user)
   return [
     {
       path: PATHS.LANDING,
@@ -46,8 +56,16 @@ const routes = (props) => {
       element: <EditPlaces {...props} />,
     },
     {
-      path: PATHS.EDITPLACES, 
-      element: <EditPlaces {...props} />,
+      path: PATHS.LOGOUT, 
+      element: <Landing {...props} />,
+    },
+    {
+      path: PATHS.EDITUSER, 
+      element: <EditUser {...props} />,
+    },
+    {
+      path: PATHS.EDITPASSWORD, 
+      element: <EditPassword {...props} />,
     },
     {
       path: PATHS.PROTECTEDPAGE,

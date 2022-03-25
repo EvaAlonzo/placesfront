@@ -1,0 +1,170 @@
+.CreatePlaces{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content:space-around;
+}
+.CreateFullCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 100vh;
+    margin: 40px;
+    background-color: darkgreen;
+}
+
+.cont-image{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10px;
+    background-color: aqua;
+}
+
+.FormContCreate{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+    padding-top: 30px;
+    background-color: peru;
+    width: 50vw;
+}
+.form-creteindvi{
+    padding: 7px 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    margin: 3px 30px;
+    
+}
+.form-creteindvi input{
+    border-radius: 5px;
+    border-color: rgb(191, 189, 189);
+    border-style: solid ;
+    padding: 6px 90px;
+}
+
+.selectcont{
+    display: block;
+    font-weight: 400;
+}
+
+
+.cont-info-CP{
+    align-items: flex-end;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.CreateFullCard button {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #1d1d1d;
+    background-color: #fdf7ef;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.cont-image input{
+    margin: 30px 20px;
+}
+.formButton{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.form-creteindvi select{
+    padding: 6px 70px;
+    border-radius: 8px;
+    border-color: rgb(191, 189, 189);
+}
+
+.Flecha{
+    width: 50px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.inputfile2{
+    width: 0.1px; 
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile2 + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.inputfile2:focus + label,
+.inputfile2 + label:hover {
+ background-color: transparent;
+}
+
+.inputfile2 + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile2:focus + label {
+	outline: 1px dotted transparent;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+inputfile + label * {
+	pointer-events: none;
+}
+
+.CAMERICON2{
+    width: 70px !important;
+    height: 60px;
+    border-radius: 0 !important;
+    margin-top: 14%;
+    padding-left: 40%;
+    padding-bottom: 25%;
+}
+
+.form-creteindvi-select{
+    padding: 7px 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    margin: 3px 30px;
+	position: relative;
+}
+
+.form-creteindvi-select select{
+    padding: 6px 70px;
+    border-radius: 8px;
+    border-color: rgb(191, 189, 189);
+    display: inline-block;
+	width: 290px;
+	cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.form-creteindvi input{
+    border-radius: 5px;
+    border-color: rgb(191, 189, 189);
+    border-style: solid ;
+    padding: 6px 90px;
+}
+
+.select-css{
+    position: absolute;
+}
+
+
+
+
+

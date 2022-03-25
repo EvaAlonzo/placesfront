@@ -11,4 +11,6 @@ export { default as Done } from "./Done";
 export { default as Pending } from "./Pending";
 export { default as CreatePlaces } from "./CreatePlaces";
 export { default as EditPlaces } from "./EditPlaces";
+export { default as EditUser } from "./EditUser";
+export { default as EditPassword } from "./EditPassword"
 

@@ -1,14 +1,14 @@
 .Home{
-    /* background-image: url("../../Images/Home.png"); */
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background-repeat: no-repeat;
     background-position-x: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 0px;
+    position: fixed;
 }
 
 .homeImgs{
@@ -46,4 +46,5 @@
     color: #1d1d1d;
     background-color: #fdf7ef;
     border-radius: 15px;
+    height: 60px;
 }

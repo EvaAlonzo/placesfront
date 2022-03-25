@@ -4,7 +4,7 @@ import * as PATHS from "../../utils/paths";
 import { Link } from "react-router-dom";
 const Favorites = (props) => {
     return(
-        <div className="Home">
+        <div className="FAV">
         <div><header><Navbar/></header></div>
         <Link to={PATHS.HOME}><button>Return</button></Link>
         
