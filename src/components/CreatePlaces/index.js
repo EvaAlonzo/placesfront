@@ -5,7 +5,6 @@ import { Navbar } from "../index";
 import { uploadCloud } from "../../services/uploadCloud";
 import { useState } from "react";
 import { createPlaces } from "../../services/places";
-import { successStatus } from "../../utils/clearres";
 import flecha from "../../Images/Flecha.png"
 import camera from "../../Images/Camera.png"
 import { useNavigate } from "react-router-dom";
