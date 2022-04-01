@@ -12,7 +12,7 @@
     width: 95vw;
     height: 100vh;
     margin: 40px;
-    background-color: darkgreen;
+
 }
 
 .cont-image{
@@ -20,7 +20,7 @@
     flex-direction: column;
     padding: 30px;
     margin: 10px;
-    background-color: aqua;
+
 }
 
 .FormContCreate{
@@ -28,12 +28,12 @@
     flex-direction:column;
     align-items: flex-end;
     padding-top: 30px;
-    background-color: peru;
+
     width: 50vw;
 }
 .form-creteindvi{
     padding: 7px 100px;
-    background-color: pink;
+ 
     display: flex;
     justify-content: flex-end;
     margin: 3px 30px;
@@ -135,7 +135,7 @@ inputfile + label * {
 
 .form-creteindvi-select{
     padding: 7px 100px;
-    background-color: pink;
+
     display: flex;
     justify-content: flex-end;
     margin: 3px 30px;

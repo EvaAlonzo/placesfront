@@ -51,22 +51,22 @@ const routes = (props) => {
       path: PATHS.CREATEPLACES, 
       element: <CreatePlaces {...props} />,
     },
-    {
-      path: PATHS.EDITPLACES, 
-      element: <EditPlaces {...props} />,
-    },
-    {
-      path: PATHS.LOGOUT, 
-      element: <Landing {...props} />,
-    },
-    {
-      path: PATHS.EDITUSER, 
-      element: <EditUser {...props} />,
-    },
-    {
-      path: PATHS.EDITPASSWORD, 
-      element: <EditPassword {...props} />,
-    },
+    // {
+    //   path: PATHS.EDITPLACES, 
+    //   element: <EditPlaces {...props} />,
+    // },
+    // {
+    //   path: PATHS.LOGOUT, 
+    //   element: <Landing {...props} />,
+    // },
+    // {
+    //   path: PATHS.EDITUSER, 
+    //   element: <EditUser {...props} />,
+    // },
+    // {
+    //   path: PATHS.EDITPASSWORD, 
+    //   element: <EditPassword {...props} />,
+    // },
     {
       path: PATHS.PROTECTEDPAGE,
       element: user ? (

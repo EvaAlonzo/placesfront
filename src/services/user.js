@@ -3,7 +3,7 @@ import { api } from "./api";
 
 export function detailUser(){
     return api
-    .get("/profile/detailUser")
+    .get("/profile/detailuser")
     .then(successStatus)
     .catch(internalServerError)
 };

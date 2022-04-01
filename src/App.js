@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Loading }from "./components";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
-// import * as USER_HELPERS from "./utils/userToken";
+import * as USER_HELPERS from "./utils/userToken";
 
 export default function App() {
   const [user, setUser] = useState(null);
